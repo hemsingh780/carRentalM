@@ -1,0 +1,52 @@
+.header-parent{
+    /* background-color: lightblue; */
+    display: flex;
+    flex: 4;
+    justify-content: space-around;
+}
+
+.header-parent div a{
+    text-decoration: none;
+    color: black;
+      cursor: pointer;
+}
+
+
+.header-parent div a:hover{
+    color:blue;
+}
+
+
+.header-main{
+    /* background-color: blue; */
+    position: fixed;
+    z-index:200;
+    left: 0;
+    right: 0;
+     background-color: whitesmoke;
+    display: flex;
+    padding: 11px;
+    box-shadow:1px 1px 4px -1px #666262;
+}
+.logo{    
+    flex: 1;
+}
+.logo-span-main{
+    /* border: 1px solid black; */
+    /* padding: 5px; */
+    /* background-color: white; */
+    display: flex;
+    justify-content: center;
+    align-self: center; 
+
+}
+
+.logo-span-main svg:hover{
+   color:blue;
+}
+/* .logo-sha{
+    color: red;
+}
+.logo-c{
+    color: red;
+} */

@@ -1,0 +1,67 @@
+.Login-main{
+    /* background: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* width: 100%; */
+    height: 100vh;
+}
+
+.login-main1{
+      align-self: center;
+      width: 36%;
+      background-color: rgba(0,0,0,.75);
+      padding: 12px;
+      /* box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px; */
+}
+
+.Login-main form div{
+     display: flex;
+     flex-direction: column;
+     margin: 12px; 
+    /* box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px; */
+}
+.Login-main form div label{
+ color: whitesmoke;
+ margin: 8px 0;
+ font-weight: lighter;
+ font-size: x-large;
+   /* box-shadow: rgba(240, 46, 170, 0.4) 5px 5px, rgba(240, 46, 170, 0.3) 10px 10px, rgba(240, 46, 170, 0.2) 15px 15px, rgba(240, 46, 170, 0.1) 20px 20px, rgba(240, 46, 170, 0.05) 25px 25px; */
+}
+
+.Login-main form div input{
+    padding: 8px;
+   }
+   
+.login-Submit{
+   background-color: red;
+   font-weight: bolder;
+   color: whitesmoke;
+   outline: none;
+   border: none;
+
+}
+.login-h{
+    margin: 12px;
+    color: whitesmoke;
+    font-weight: bolder;
+    font-size: xx-large;
+}
+.login-last{
+    display: flex;
+    justify-content: space-between;
+    margin: 12px;
+}
+.login-last div{
+    width: 50%;
+    color: whitesmoke;
+    font-weight: bolder;
+    text-align: center;
+    margin: 6px;
+    border: 1px solid white;   
+    padding: 8px;
+    cursor: pointer;
+}
+.login-last div:hover{
+   background-color: #1976d2;
+}

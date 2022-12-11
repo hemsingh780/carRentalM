@@ -1,0 +1,33 @@
+.about-main1{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 60%;
+}
+.about-main{
+    height: 100vh;
+    display: flex;
+}
+.about-main div:nth-child(1){
+    align-self: center;
+}
+.about-h{
+    margin: 0 auto 12px auto;
+    width: 60%;
+    font-size: xx-large;
+    font-weight: 600;
+}
+.about-main1 p{
+    text-align: justify;
+}
+
+.imgDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-left: 6px; */
+}
+.about-detail{
+   width: 60%;
+}

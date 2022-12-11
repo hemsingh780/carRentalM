@@ -1,0 +1,71 @@
+.contactus-m{
+   display: flex;
+   justify-content: space-around;
+}
+
+.contactus-m1{
+   /* background-color: red; */
+   display: flex;
+   flex-direction: column;
+   height: 100vh;
+   justify-content: center;
+}
+.contactus-address{
+   margin: 8px;
+}
+
+.contactus-phone{
+    margin: 8px;
+}
+.contactus-email{
+    margin: 8px;
+}
+.con-form-main{
+    /* border: 1px solid black; */
+    display: flex;
+    /* background-color: red; */
+    flex-direction: column;
+    justify-content: center;
+    width: 36%;
+    height: 100vh;
+}
+
+
+.con-form-main form div{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.con-form-main1{
+/* border:1px solid black; */
+box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+padding: 12px;
+    /* background-color: red; */
+}
+
+.con-form-main1 label{
+  
+    margin:8px 0;
+}
+    
+
+.con-submit{
+    border: 1px solid black;
+    background-color: white;
+    font-weight: 600;
+    margin-top: 8px;
+    width: 100%;
+}
+.con-submit{
+    color: whitesmoke;
+    background-color: #1976d2;
+}
+
+
+
+
+
+
+
+
