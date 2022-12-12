@@ -13,6 +13,7 @@ import Register from './pages/Register/Register';
 import Login from './pages/Login/Login';
 import Aboutus from './pages/Aboutus/Aboutus';
 import Footer from './components/Footer';
+import CarCheckoutModel from './pages/CarCheckoutModel/CarCheckoutModel';
 
 // import HomeFrontFrom from './components/HomeFrontFrom';
 
@@ -21,13 +22,13 @@ function App() {
 
   return (
     <>
-  <Header />
+  {/* <Header /> */}
   {/* <Login /> */}
 <div style={{
   height:"46px"
 }}></div>
 
-   <Routes> 
+   {/* <Routes> 
     <Route  path='/' element={<Landing />} />
     <Route  path='/carsCollections' element={<CarsCollection />} />
     <Route  path="/contactus" element={<Contactus />} />
@@ -37,7 +38,8 @@ function App() {
 
 
   </Routes> 
-<Footer />
+<Footer /> */}
+<CarCheckoutModel />
 {/* <CarsCollection /> */}
 </>
 
