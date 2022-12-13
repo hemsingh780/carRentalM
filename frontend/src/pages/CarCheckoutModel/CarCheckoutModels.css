@@ -1,0 +1,84 @@
+.checkoutModel-Main{
+     
+     width: 50%;
+     margin: 0 auto;
+     padding: 8px;
+}
+
+.checkoutModel-Main1{
+    
+}
+
+.checkoutModel-Main11 {
+    display: flex;
+    justify-content: space-between;
+}
+.checkoutModel-Main2{
+    margin: 2.5% 0;
+}
+
+
+.keepInMindInnerDiv1{
+  display: flex;
+  justify-content: space-between;    
+  margin: 2% 0;
+}
+
+.keepInMindInnerDiv1Detail{
+    width: 95%;
+    text-align: left;
+  
+}
+.keepInMindInnerDiv1Detail div{
+   margin: 0 0 0.5% 0;
+}
+.checkoutModel-Main3{
+  display:flex;
+  justify-content: space-between;
+}
+
+.checkoutModel-Main3 div:nth-child(2){
+  border:1px solid black;
+  padding: 8px;
+  text-align: center;
+  width: 70%;
+  cursor: pointer;
+}
+
+.checkoutModel-Main3 div:nth-child(2){
+  border:1px solid black;
+  font-weight: 600;
+  padding: 8px;
+  text-align: center;
+  width: 70%;
+  cursor: pointer;
+}
+
+.checkoutModel-Main3 div:nth-child(2):hover{
+  color: whitesmoke;
+  background-color: #1976d2;
+}
+
+
+
+.checkoutModel-Main3 div:nth-child(1){
+    align-self: center;
+    font-size:xx-large;
+    font-weight: 600;
+}
+.checkoutModel-Main2-h{
+  font-size: x-large;
+  font-weight: 600;
+}
+.checkoutModel-Main11-CarName{
+  font-weight: bolder;
+  font-size: larger;
+}
+.timeCarCheck{
+  margin-top: 1.5%;
+  display: flex;
+}
+.timeCarCheck div:nth-child(1){
+  align-self: center;
+  margin-right: 1.5%;
+}
