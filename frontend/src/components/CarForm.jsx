@@ -12,7 +12,7 @@ const CarForm = ({heading }) => {
           <div>
               <form >
                   <div >
-                      <label id='username'>username</label>
+                      <label id='username'>Full Name (as per driving license) </label>
                       <input type="text" for="username" />
                   </div>
                   <div>
@@ -20,9 +20,14 @@ const CarForm = ({heading }) => {
                       <input type="text" for="password" />
                   </div>
 
-{           heading == "SIGN UP"  ?     <div>
-                      <label id='Email'>Email</label>
-                      <input type="email" for="Email" />
+                  {heading == "SIGN UP"  ?  <div>
+                  <label id='Email'>Email</label>
+                  <input type="email" for="Email" />
+                  </div> : null }
+
+                  {heading == "SIGN UP" ?<div>
+                      <label id='phoneNumber'>Phone Number</label>
+                      <input type="text" for="phoneNumber" />
                   </div> : null }
 
                   

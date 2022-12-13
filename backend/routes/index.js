@@ -1,0 +1,9 @@
+const express = require("express");
+const router = express.Router();
+
+router.use("/api", require("./api/index"));
+
+
+module.exports = router;
+
+// ("localhost:8000//api/post/:id");
