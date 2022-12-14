@@ -14,6 +14,8 @@ import Login from './pages/Login/Login';
 import Aboutus from './pages/Aboutus/Aboutus';
 import Footer from './components/Footer';
 import CarCheckoutModel from './pages/CarCheckoutModel/CarCheckoutModel';
+import Admin from './pages/Admin/Admin';
+import User from './pages/Admin/Users/User';
 
 // import HomeFrontFrom from './components/HomeFrontFrom';
 
@@ -22,9 +24,9 @@ function App() {
 
   return (
     <>
-  <Header />
+  {/* <Header /> */}
   {/* <Login /> */}
-<div style={{
+{/* <div style={{
   height:"46px"
 }}></div>
 
@@ -36,9 +38,14 @@ function App() {
     <Route  path="/register" element={<Register />} />
     <Route  path="/aboutus" element={<Aboutus />} />
   </Routes> 
-<Footer />
+<Footer /> */}
 {/* <CarCheckoutModel /> */}
 {/* <CarsCollection /> */}
+<Admin />
+  <Routes> 
+    <Route  path='/Users' element={<User />} />
+    <Route  path="/adminCars" element={<CarsCollection marginFromAdmin="11%"/>} />
+  </Routes> 
 </>
 
 

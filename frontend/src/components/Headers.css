@@ -18,12 +18,11 @@
 
 
 .header-main{
-    /* background-color: blue; */
+    background-color:#fffbfb;   
     position: fixed;
     z-index:200;
     left: 0;
     right: 0;
-     background-color: whitesmoke;
     display: flex;
     padding: 11px;
     box-shadow:1px 1px 4px -1px #666262;
