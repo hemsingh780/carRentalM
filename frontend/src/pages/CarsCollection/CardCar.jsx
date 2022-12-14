@@ -1,7 +1,7 @@
 import React from 'react'
 import "./CarsCollections.css"
 import StarIcon from '@mui/icons-material/Star';
-const CardCar = ({ImgSrc , carName , carType , rating , km , price}) => {
+const CardCar = ({ImgSrc , carName , carType , rating , km , price , isFromAdmin}) => {
   return (
     <div className='carCard'>
         <div>
@@ -50,31 +50,18 @@ const CardCar = ({ImgSrc , carName , carType , rating , km , price}) => {
                         >kms</span><span>driven</span></p>
                 </div>
             </div>
-            <div style={{
-                display:"flex",
-                justifyContent:"space-around"
-            }}>
+            <div className={isFromAdmin ? "carFromAdmin" : "carCollectionLower"}>
                 <div 
-                style={{
-                display: "flex",
-                justifyContent: "center",
-                alignSelf: "center",
-                fontSize: "xx-large",
-                color: "grey",
-               }}
                 
+                className={isFromAdmin ? "editCar" :"carPrice"}
                 >
-                    <span>₹</span>{price}
+                  { isFromAdmin ? "Edit " :<span>₹{price}</span>}
                 </div>
                 <div 
-                 style={{
-                    border:"1px solid black",
-                    padding:"8px",
-                    cursor:"pointer"
-                 }}
-                 className="carCardBookNow"
+             
+                 className={isFromAdmin ? "removeCar" : "carCardBookNow"}
                 >
-                    Book Now
+                  {isFromAdmin ? "Remove" : "Book Now"}
                 </div>
             </div>
         </div>

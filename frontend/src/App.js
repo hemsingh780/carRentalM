@@ -24,9 +24,9 @@ function App() {
 
   return (
     <>
-  {/* <Header /> */}
+  <Header />
   {/* <Login /> */}
-{/* <div style={{
+<div style={{
   height:"46px"
 }}></div>
 
@@ -37,15 +37,13 @@ function App() {
     <Route  path="/login" element={<Login />} />
     <Route  path="/register" element={<Register />} />
     <Route  path="/aboutus" element={<Aboutus />} />
+    <Route  path="/admin/adminCars" element={<CarsCollection marginFromAdmin="11%" isFromAdmin={true} />} />
+    <Route  path='/admin/Users' element={<User />} />
   </Routes> 
-<Footer /> */}
+<Footer />
 {/* <CarCheckoutModel /> */}
 {/* <CarsCollection /> */}
 <Admin />
-  <Routes> 
-    <Route  path='/Users' element={<User />} />
-    <Route  path="/adminCars" element={<CarsCollection marginFromAdmin="11%"/>} />
-  </Routes> 
 </>
 
 

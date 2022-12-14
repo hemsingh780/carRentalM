@@ -1,15 +1,19 @@
 import React from 'react'
 import "./Users.css"
-const CardUser = ({userName}) => {
-    return (
+const CardUser = ({name ,  email , mobileNo , orderedCars}) => {
+    
+  console.log(orderedCars);
+  return (
 
     
-        <div className="card">
-        <img src="https://www.w3schools.com/howto/img_avatar.png" alt="Avatar" style={{width:"100%"}} />
-        <div className="container">
-        <h4><b>{userName}</b></h4> 
-        </div>
-        </div>
+      <div className="card">
+          <div className="container">
+          <h4>name: <b>{name}</b></h4>
+          <h4>Email: <b>{email}</b></h4>
+          <h4>MobileNo: <b>{mobileNo}</b></h4>
+          {/* <h4>MobileNo: <b>{mobileNo}</b></h4> */}
+          </div>
+      </div>
   )
 
 }
