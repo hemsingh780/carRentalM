@@ -12,8 +12,8 @@ const CarForm = ({heading }) => {
           <div>
               <form >
                   <div >
-                      <label id='username'>Full Name (as per driving license) </label>
-                      <input type="text" for="username" />
+                      <label id='fullName'>Full Name (as per driving license) </label>
+                      <input type="text" for="fullName" />
                   </div>
                   <div>
                       <label id='password'>password</label>
