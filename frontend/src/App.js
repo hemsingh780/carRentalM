@@ -22,24 +22,26 @@ function App() {
 
   return (
     <>
-  {/* <Header /> */}
-  {/* <Login /> */}
+  <Header />
+
 <div style={{
   height:"46px"
 }}></div>
 
-   {/* <Routes> 
+   <Routes> 
     <Route  path='/' element={<Landing />} />
     <Route  path='/carsCollections' element={<CarsCollection />} />
     <Route  path="/contactus" element={<Contactus />} />
     <Route  path="/login" element={<Login />} />
     <Route  path="/register" element={<Register />} />
     <Route  path="/aboutus" element={<Aboutus />} />
+    <Route  path="/CarCheckoutModel" element={<CarCheckoutModel />} />
 
 
+   
   </Routes> 
-<Footer /> */}
-<CarCheckoutModel />
+<Footer />
+
 {/* <CarsCollection /> */}
 </>
 
