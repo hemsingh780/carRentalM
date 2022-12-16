@@ -1,7 +1,10 @@
 
 const mongoose = require("mongoose");
 
-const url = `mongodb+srv://hem1234dhoni:hem1234dhoni@cluster0.xn4ky.mongodb.net/carRental?retryWrites=true&w=majority`;
+const url = process.env.MONGODB_URL
+//
+// const url  = "hem1234dhoni:hem1234dhoni@cluster0.xn4ky.mongodb.net/carRental?retryWrites=true&w=majority";
+//hem1234dhoni:hem1234dhoni@cluster0.xn4ky.mongodb.net/carRental?retryWrites=true&w=majority
 
 mongoose
   .connect(url)

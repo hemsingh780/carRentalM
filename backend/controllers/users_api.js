@@ -96,36 +96,40 @@ const userLogin = async (request, response) => {
 
 const createNewUser = async (request, response) => {
   try {
-    const user = await User.findOne({
-      emailOrMobile: request.body.emailOrMobile,
-    });
-    if (user) {
-      return response.status(422).json({
-        message: "User already exist",
-      });
-    } else {
-      try {
-        const newUser = new User({
-           fullName:req.body.fullName,
-           email:req.body.email,
-           phoneNumber:req.body.phoneNumber,
-           password:bcrypt.hashSync(req.body.password , 8)
-         });
+    console.log('user' , request.body.fullName); 
 
-        await newUser.save();
+    // const user = await User.findOne({
+    //   emailOrMobile: request.body.emailOrMobile,
+    // });
+    
+    // if (user) {
+    //   return response.status(422).json({
+    //     message: "User already exist",
+    //   });
+    // } else {
+    //   try {
+    //     const newUser = new User({
+    //        fullName:req.body.fullName,
+    //        email:req.body.email,
+    //        phoneNumber:req.body.phoneNumber,
+    //        password:bcrypt.hashSync(req.body.password , 8)
+    //      });
+
+    //     await newUser.save();
         return response.status(200).json({
+          data:req.body,
           message: "User registerd succesfully",
         });
-      } catch (error) {
-        console.log(error);
-        return response.status(422).json({
-          message: "Error while creating user",
-        });
-      }
-    }
+    //   } catch (error) {
+    //     console.log(error);
+    //     return response.status(422).json({
+    //       message: "Error while creating user",
+    //     });
+    //   }
+    // }
   } catch (error) {
     return response.status(500).json({
-      message: "Internal server Error",
+      message: "Internal server Error in register",
     });
   }
 };

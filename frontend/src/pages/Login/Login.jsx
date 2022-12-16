@@ -6,6 +6,7 @@ const Login = () => {
     <>
       <CarForm 
         heading="LOGIN"
+        actionPath = "/api/user/login"
       />
     </>
   )
