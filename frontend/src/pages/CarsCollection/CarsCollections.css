@@ -1,18 +1,81 @@
 /*  Card css */
 
 .carCard{
+    background-color:  #fffbfb;
+
     width:300px;
-    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    /* box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px; */
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     margin: 8px;
+    cursor: pointer;
+}
+
+.carCard:hover{
+    /* width:300px; */
+    box-shadow: #1976d2 0px 22px 70px 4px;
+    /* box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px; */
+  
+}
+.carPrice{
+        display: flex;
+        justify-content: center;
+        align-self: center;
+        font-size: xx-large;
+        color: grey; 
+}
+
+
+.editCar{
+    font-weight: 600;
+    cursor: pointer;
+    border:1px solid black;
+    padding:8px;
+    color:white
+}
+
+.editCar:hover{
+    box-shadow: green 0px 22px 70px 4px;
+}
+.carCollectionLower{
+    display: flex;
+    justify-content: space-around;
+}
+
+.carFromAdmin{
+     display: flex;
+     justify-content: space-around;
+}
+.carFromAdmin div:nth-child(1){
+    width: 40%;
+    text-align: center;
+    background-color: green;
+}
+
+.carFromAdmin div:nth-child(2){
+    width: 40%;
+    text-align: center;
+    background-color: red;
 }
 
 .carCard img{
     width: 100%;
 }
+.removeCar{
+    font-weight: 600;
+    cursor: pointer;
+    border:1px solid black;
+    padding:8px;
+    color:white
+}
+.removeCar:hover{
+    box-shadow: red 0px 22px 70px 4px;
 
+}
 .carCardBookNow{
     font-weight: 600;
     cursor: pointer;
+    border:1px solid black;
+    padding:8px;
 }
 .carCardBookNow:hover{
     color: whitesmoke;

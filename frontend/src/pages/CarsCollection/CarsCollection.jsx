@@ -2,7 +2,9 @@ import React from 'react'
 import Hcard from '../../components/Hcard'
 import CardCar from './CardCar'
 
-const CarsCollection = () => {
+const CarsCollection = ({marginFromAdmin , isFromAdmin}) => {
+
+  console.log(isFromAdmin)
     const data = [
         {
           ImgSrc:'https://hemsingh780.github.io/hosted-assest/RenualtKwid.png',
@@ -23,7 +25,8 @@ const CarsCollection = () => {
      style={{
       display:'flex',
       justifyContent:"space-around",
-      flexWrap:"wrap"
+      flexWrap:"wrap",
+      marginLeft:marginFromAdmin
      }}
     >
     
@@ -32,6 +35,7 @@ const CarsCollection = () => {
         repeatData.map((x,i) => {
           return (
             <CardCar 
+            isFromAdmin = {isFromAdmin}
               key={i}
               ImgSrc={x.ImgSrc}
               carName={x.carName}

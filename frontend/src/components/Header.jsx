@@ -4,6 +4,32 @@ import DirectionsCarFilledIcon from '@mui/icons-material/DirectionsCarFilled';
 import {
   Link
 } from 'react-router-dom';
+import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+
+
+const Userlogin   = ({username}) => {
+     return(
+      <div style={{
+        display:"flex",
+        
+      }}>
+
+          <div
+            style={{
+              display:"flex",
+              justifyContent:"center",
+              alignSelf:"center",
+              marginRight:'4px'
+            }}
+          >
+             <AccountCircleIcon />
+          </div>
+          <div>
+              username
+          </div>
+      </div>
+     )
+  } 
 
 const Header = () => {
   
@@ -13,7 +39,7 @@ const Header = () => {
 //     height: "100px",
 //     color: 'yellow'
 // }}
-
+let isuser  = false;
   return ( 
 
 
@@ -43,7 +69,9 @@ const Header = () => {
               <Link to="/contactus">Contact us</Link> 
           </div>
           <div>
-              <Link to="/Login">Login</Link> 
+            {
+            isuser ? <Userlogin /> :<Link to="/Login">Login</Link> 
+            }   
           </div>
         </div>
       </div>

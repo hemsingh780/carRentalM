@@ -1,4 +1,9 @@
-
+  // "proxy": {
+  //   "/api": {
+  //     "target": "https://localhost:8000",
+  //     "secure": false
+  //   }
+  // }
 import './App.css';
 // import Hcard from './components/Hcard';
 import Header from './components/Header';
@@ -14,6 +19,8 @@ import Login from './pages/Login/Login';
 import Aboutus from './pages/Aboutus/Aboutus';
 import Footer from './components/Footer';
 import CarCheckoutModel from './pages/CarCheckoutModel/CarCheckoutModel';
+import Admin from './pages/Admin/Admin';
+import User from './pages/Admin/Users/User';
 
 // import HomeFrontFrom from './components/HomeFrontFrom';
 
@@ -23,6 +30,7 @@ function App() {
   return (
     <>
   <Header />
+    {/* <Login /> */}
 
 <div style={{
   height:"46px"
@@ -35,14 +43,14 @@ function App() {
     <Route  path="/login" element={<Login />} />
     <Route  path="/register" element={<Register />} />
     <Route  path="/aboutus" element={<Aboutus />} />
-    <Route  path="/CarCheckoutModel" element={<CarCheckoutModel />} />
-
-
-   
+    <Route  path="/admin/adminCars" element={<CarsCollection marginFromAdmin="11%" isFromAdmin={true} />} />
+    <Route  path='/admin/Users' element={<User />} />
   </Routes> 
 <Footer />
+{/* <CarCheckoutModel /> */}
 
 {/* <CarsCollection /> */}
+{/* <Admin /> */}
 </>
 
 
