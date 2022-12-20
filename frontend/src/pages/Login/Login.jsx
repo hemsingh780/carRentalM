@@ -2,11 +2,11 @@ import React from 'react'
 import CarForm from '../../components/CarForm'
 
 const Login = () => {
-  // window.localStorage.setItem('name', 'Obaseki Nosa');
+
 
   const [email , setEmail] = React.useState(" ");
   const [password , setPassword] = React.useState(" ");
-
+  const [currentUser, setCurrentUser] = React.useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,8 +24,19 @@ const Login = () => {
           body: JSON.stringify(data),
         });
         let resJson = await res.json();
+        if(resJson.user){
+          setCurrentUser(resJson.user)
+        }
         console.log("resJson",resJson)
 }
+
+React.useEffect(() => {
+      if(currentUser){
+        console.log(currentUser)
+         window.localStorage.setItem('username', currentUser.fullName);
+      }
+
+} , [currentUser])
 
   return (
     <>

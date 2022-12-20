@@ -1,4 +1,4 @@
-// import React from 'react'
+import React from 'react'
 import "./Headers.css"
 import DirectionsCarFilledIcon from '@mui/icons-material/DirectionsCarFilled';
 import {
@@ -7,7 +7,10 @@ import {
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 
-const Userlogin   = ({username}) => {
+
+
+
+const Userlogin   = ({nameofuser}) => {
      return(
       <div style={{
         display:"flex",
@@ -25,7 +28,7 @@ const Userlogin   = ({username}) => {
              <AccountCircleIcon />
           </div>
           <div>
-              username
+              {nameofuser}
           </div>
       </div>
      )
@@ -39,7 +42,14 @@ const Header = () => {
 //     height: "100px",
 //     color: 'yellow'
 // }}
+let [currentUser , setCurrentUser] = React.useState(false)
 let isuser  = false;
+
+React.useEffect(() => {
+  let name = window.localStorage.getItem('username');
+  setCurrentUser(name)
+} ,[currentUser])
+
   return ( 
 
 
@@ -70,7 +80,7 @@ let isuser  = false;
           </div>
           <div>
             {
-            isuser ? <Userlogin /> :<Link to="/Login">Login</Link> 
+            currentUser ? <Userlogin nameofuser = {currentUser} /> :<Link to="/Login">Login</Link> 
             }   
           </div>
         </div>
