@@ -72,10 +72,12 @@ const userLogin = async (request, response) => {
 
     console.log(user);
 
-    let passwordIsValid =   await  bcyrpt.compare(request.body.password, user.password)
-
-
-    if(passwordIsValid){
+    // let passwordIsValid =   await  bcyrpt.compare(request.body.password, user.password)
+    // let passwordIsValid = await bcrypt.compare(request.body.password , user.password)
+    // let password2 = bcrypt.compareSync(request.body.password, user.password);
+  //   console.log("password2" , password2)
+  //  console.log("passwordisvalid " , passwordIsValid)
+    if(request.body.password ===  user.password){
           return response
           .status(200)
           .json({ message: "User login details match", user: user });              
@@ -116,14 +118,14 @@ const userLogin = async (request, response) => {
 const createNewUser = async (request, response) => {
       try {
                
-      let generatePassword =  await  bcrypt.hash(request.body.password, 10)
+      // let generatePassword =  await  bcrypt.hash(request.body.password, 10)
        
-      if(generatePassword){
+      // if(generatePassword){
         const newUser = new User({
            fullName:request.body.fullName,
            email:request.body.email,
            phoneNumber:request.body.phoneNumber,
-           password:generatePassword 
+           password:request.body.password 
          });
 
         await newUser.save();
@@ -131,9 +133,9 @@ const createNewUser = async (request, response) => {
           data:request.body,
           message: "User registerd succesfully",
         });
-    }else{
-      console.log("something wrong in generatepassword !");
-    }
+    // }else{
+    //   console.log("something wrong in generatepassword !");
+    // }
       } 
       catch (error) {
         console.log("error",error);
