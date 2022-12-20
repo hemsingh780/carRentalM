@@ -23,7 +23,8 @@ function App() {
   return (
     <>
   <Header />
-  {/* <Login /> */}
+    {/* <Login /> */}
+
 <div style={{
   height:"46px"
 }}></div>
@@ -40,8 +41,9 @@ function App() {
   </Routes> 
 <Footer />
 {/* <CarCheckoutModel /> */}
+
 {/* <CarsCollection /> */}
-<Admin />
+{/* <Admin /> */}
 </>
 
 
