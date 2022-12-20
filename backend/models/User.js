@@ -22,14 +22,12 @@ const userSchema = mongoose.Schema(
     phoneNumber: {
       type:Number,
       required: true,
-      max: 10,
       unique: true,
     },
     password: {
       type: String,
       required: true,
-      select: false,
-      min: 6,
+      // select: false,
     },
   },
   { timestamps: true }

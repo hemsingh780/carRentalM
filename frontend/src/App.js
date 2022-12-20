@@ -1,11 +1,4 @@
-  // "proxy": {
-  //   "/api": {
-  //     "target": "https://localhost:8000",
-  //     "secure": false
-  //   }
-  // }
 import './App.css';
-// import Hcard from './components/Hcard';
 import Header from './components/Header';
 import CarsCollection from './pages/CarsCollection/CarsCollection';
 import Landing from './pages/Landing';

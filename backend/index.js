@@ -16,6 +16,8 @@ app.use(bodyParser.json())
 
 
 app.use(express.json());
+// app.use(express.urlencoded());
+
 require("./config/mongoose/config");
 app.use(cookieParser());
 
@@ -26,8 +28,8 @@ app.use("/images", imagePath);
 app.use("/uploads", express.static(__dirname + "/uploads"));
 app.use(require(routerPath));
 
-console.log(routerPath);
+// console.log(routerPath);
 
 app.listen(8000, () => {
-  console.log("Server start");
+  console.log("Server start in 8000" );
 });

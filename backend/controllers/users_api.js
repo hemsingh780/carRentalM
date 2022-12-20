@@ -1,3 +1,4 @@
+
 const { request } = require("express");
 var bcrypt = require("bcrypt");
 const User = require("../models/User");
@@ -57,79 +58,87 @@ const sendUserJwt = async (request, response) => {
     userToken: request.cookies.userToken,
   });
 };
+  // bcrypt.hash(plaintextPassword, 10)
+  
+  //  bcyrpt.compare(plaintextPassword, hash)
+  
 
 const userLogin = async (request, response) => {
+ 
   try {
     const user = await User.findOne({
-        email:req.body.email
+      email:request.body.email
     });
 
-    var passwordIsValid = bcrypt.compareSync(
-      req.body.password,
-      user.password
-    );
+    console.log(user);
 
-    if (!passwordIsValid) {
-      // user["password"] = null;
-      const token = User.generateToken(user, "H@rsh", "30d");
-      response.cookie("userToken", token, {
-        secure: true,
-        httpOnly: true,
-        expires: new Date("01 12 2024"),
-        // sameSite: "lax",
-      });
-      return response
-        .status(200)
-        .json({ message: "User login details match", userToken: token });
-    } else {
-      return response
-        .status(422)
-        .json({ message: "User login details did'nt match" });
+    let passwordIsValid =   await  bcyrpt.compare(request.body.password, user.password)
+
+
+    if(passwordIsValid){
+          return response
+          .status(200)
+          .json({ message: "User login details match", user: user });              
+    }else {
+          return response
+          .status(422)
+          .json({ message: "User login details did'nt match" });
     }
-  } catch (error) {
-    console.log(error);
-    return response.status(500).json({ message: "Internal server error" });
-  }
+
+    // return response
+    // .status(200)
+    // .json({ message: "User login details match", user: user });
+    // if (!passwordIsValid) {
+      // user["password"] = null;
+      // const token = User.generateToken(user, "H@rsh", "30d");
+      // response.cookie("userToken", token, {
+      //   secure: true,
+      //   httpOnly: true,
+      //   expires: new Date("01 12 2024"),
+      //   // sameSite: "lax",
+      // });
+
+    // } else {
+
+    // }
+
+
+    // }
+      } catch (error) {
+        console.log(error);
+        return response.status(500).json({ message: "Internal server error" });
+      }
+
 };
 
 
 
 const createNewUser = async (request, response) => {
-  try {
-    console.log('user' , request.body.fullName); 
+      try {
+               
+      let generatePassword =  await  bcrypt.hash(request.body.password, 10)
+       
+      if(generatePassword){
+        const newUser = new User({
+           fullName:request.body.fullName,
+           email:request.body.email,
+           phoneNumber:request.body.phoneNumber,
+           password:generatePassword 
+         });
 
-    // const user = await User.findOne({
-    //   emailOrMobile: request.body.emailOrMobile,
-    // });
-    
-    // if (user) {
-    //   return response.status(422).json({
-    //     message: "User already exist",
-    //   });
-    // } else {
-    //   try {
-    //     const newUser = new User({
-    //        fullName:req.body.fullName,
-    //        email:req.body.email,
-    //        phoneNumber:req.body.phoneNumber,
-    //        password:bcrypt.hashSync(req.body.password , 8)
-    //      });
-
-    //     await newUser.save();
+        await newUser.save();
         return response.status(200).json({
-          data:req.body,
+          data:request.body,
           message: "User registerd succesfully",
         });
-    //   } catch (error) {
-    //     console.log(error);
-    //     return response.status(422).json({
-    //       message: "Error while creating user",
-    //     });
-    //   }
-    // }
-  } catch (error) {
+    }else{
+      console.log("something wrong in generatepassword !");
+    }
+      } 
+      catch (error) {
+        console.log("error",error);
     return response.status(500).json({
-      message: "Internal server Error in register",
+      message: "Internal server Error in register" , error,
     });
   }
 };
